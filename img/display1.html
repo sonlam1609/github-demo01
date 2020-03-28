@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Display1</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			padding: 0 150px;
+		}
+		.grid{
+			border: 1px solid black;
+		}
+		.item{	
+			width: 33.33%;
+			border: 1px solid pink;
+			float: left;
+			padding: 15px;
+		}
+		.content{
+			border: 1px solid green;
+			height: 300px;
+			position: relative;
+		}
+		.clear:after{
+			clear: both;
+			display: block;
+			content: "";
+		}
+		img{
+			width: 100%;
+		}
+		.name{
+			position: absolute;
+			top: 76%;
+			left: 3%;
+		}
+		p{
+			position: absolute;
+			top: 76%;
+			right: 3%;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.main-menu li{
+			float: left;
+			position: relative;
+		}
+		.main-menu li a{
+			display: block;
+			background: pink;
+			line-height: 30px;
+			padding: 0 50px;
+			text-decoration: none;
+			border: 1px solid white;
+		}
+		.main-menu li a:hover{
+			background: black;
+			color: white;
+		}
+		.sub-menu{
+			width: 150px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+		}
+		.sub-menu li{
+			float: none;
+		}
+		.main-menu li:hover > .sub-menu{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid clear">
+		<div class="item">
+			<div class="content">
+				<a href="#"><img src="HCM.jpg" alt=""></a>
+				<a class="name" href="#">Bac Ho Chi Minh</a>
+				<p>$99999999</p>
+			</div>
+		</div>
+		<div class="item"><div class="content"></div></div>
+		<div class="item"><div class="content"></div></div>
+		<div class="item"><div class="content"></div></div>
+		<div class="item"><div class="content"></div></div>
+	</div>
+	<div class="nav">
+		<ul class="main-menu">
+			<li><a href="">Link</a>
+				<ul class="sub-menu">
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+				</ul>
+			</li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+		</ul>
+	</div>
+</body>
+</html>

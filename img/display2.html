@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Display2</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0 150px;
+		}
+		.right{
+			height: 500px;
+			width: 20%;
+			border: 1px solid black;
+			float: left;
+		}
+		.clear:after{
+			clear: both;
+			display: block;
+			content: "";
+		}
+		.grid{
+			width: 80%;
+			border: 1px solid black;
+			padding: 15px;
+			float: left
+		}
+		.item{
+			border: 1px solid black;
+			float: left;
+			width: 33.33%;
+			padding: 10px;
+		}
+		.content{
+			height: 300px;
+			border: 1px solid green;
+		}
+		.nav1{
+			border: 1px solid red;
+		}
+		.main-menu1{
+			padding-left: 20px;
+			margin: 0;
+			list-style: flex-grow
+		}
+		.main-menu1 li a{
+			text-decoration: none;
+			display: block;
+			background: pink;
+			border: 1px solid white;
+			padding-left: 30px;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.nav{
+			margin: 0 450px;
+		}
+		.main-menu li{
+			float: left;
+			position: relative;
+		}
+		.main-menu li a{
+			text-decoration: none;
+			display: block;
+			line-height: 30px;
+			background: pink;
+			padding:0 30px;
+		}
+		.main-menu li a:hover{
+			background: black;
+			color: white;
+		}
+		.sub_menu{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 130%;
+			display: none;
+		}
+		.main-menu li:hover > .sub_menu{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="right clear">
+		<div class="nav1">
+			<ul class="main-menu1">
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="grid clear">
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+	</div>
+	<div class="nav clear">
+		<ul class="main-menu">
+			<li><a href="">Link</a>
+				<ul class="sub_menu">
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+				</ul>
+			</li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+		</ul>
+	</div>
+</body>
+</html>

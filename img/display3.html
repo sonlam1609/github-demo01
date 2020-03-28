@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Display3</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0 150px;
+		}
+		.clear:after{
+			clear: both;
+			display: block;
+			content: "";
+		}
+		.grid{
+			border: 1px solid black;
+			padding: 15px;
+		}
+		.item{
+			border: 1px red solid;
+			float: left;
+			width: 33.33%;
+			padding: 10px;
+		}
+		.content{
+			height: 300px;
+			border: 1px solid pink;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.main-menu li{
+			float: left;
+			position: relative;
+		}
+		.main-menu li a{
+			display: block;
+			line-height: 30px;
+			padding: 0 50px;
+			text-decoration: none;
+			background: pink;
+		}
+		.main-menu li a:hover{
+			background: black;
+			color: white;
+		}
+		.sub-menu{
+			width: 120%;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+		}
+		.sub-menu li{
+			float: none;
+		}
+		.main-menu li:hover > .sub-menu{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid clear">
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+		<div class="item">
+			<div class="content"></div>
+		</div>
+	</div>
+	<div class="nav">
+		<ul class="main-menu clear">
+			<li><a href="">Link</a>	
+				<ul class="sub-menu">
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 2</a></li>
+				</ul>
+
+			</li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+			<li><a href="">Link</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
